@@ -1,27 +1,27 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="LicensePlate.cs" company="Walltech">
+// <copyright file="Customer.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the LicensePlate type.
+//   Defines the Customer type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.Person
 {
+    using System.Collections.Generic;
+
+    using InSitu.Data.Models.CarInformation;
+
+    /// <inheritdoc />
     /// <summary>
-    /// The license plate.
+    /// The customer.
     /// </summary>
-    public class LicensePlate
+    public class Customer : Person
     {
         /// <summary>
-        /// Gets or sets the id.
+        /// Gets or sets the cars.
         /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Gets or sets the code.
-        /// </summary>
-        public string Code { get; set; }
+        public virtual ICollection<Car> Cars { get; set; } = new HashSet<Car>();
     }
 }

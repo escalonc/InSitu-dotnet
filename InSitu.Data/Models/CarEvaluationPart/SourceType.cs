@@ -1,18 +1,20 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Vin.cs" company="Walltech">
+// <copyright file="SourceType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the Vin type.
+//   The source type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.CarEvaluationPart
 {
+    using System.Collections.Generic;
+
     /// <summary>
-    /// The vin.
+    /// The source type.
     /// </summary>
-    public class Vin
+    public class SourceType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -20,8 +22,13 @@ namespace InSitu.Data.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the code.
+        /// Gets or sets the name.
         /// </summary>
-        public string Code { get; set; }
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the area types.
+        /// </summary>
+        public virtual ICollection<AreaType> AreaTypes { get; set; } = new HashSet<AreaType>();
     }
 }

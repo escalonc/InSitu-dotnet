@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.CarInformation
 {
     /// <summary>
     /// The fuel.

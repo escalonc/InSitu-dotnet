@@ -11,6 +11,12 @@ namespace InSitu.Data.Contexts
 {
     using System.Data.Entity;
 
+    using InSitu.Data.Models.CarEvaluationPart;
+    using InSitu.Data.Models.CarInformation;
+    using InSitu.Data.Models.CarParts;
+    using InSitu.Data.Models.Evaluation;
+    using InSitu.Data.Models.Person;
+
     /// <inheritdoc />
     /// <summary>
     /// The in situ context.
@@ -25,5 +31,105 @@ namespace InSitu.Data.Contexts
             : base("DefultConnection")
         {
         }
+
+        /// <summary>
+        /// Gets or sets the area types.
+        /// </summary>
+        public virtual DbSet<AreaType> AreaTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the evaluation parts.
+        /// </summary>
+        public virtual DbSet<EvaluationPart> EvaluationParts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the construction types.
+        /// </summary>
+        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the source types.
+        /// </summary>
+        public virtual DbSet<SourceType> SourceTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the brands.
+        /// </summary>
+        public virtual DbSet<Brand> Brands { get; set; }
+
+        /// <summary>
+        /// Gets or sets the cars.
+        /// </summary>
+        public virtual DbSet<Car> Cars { get; set; }
+
+        /// <summary>
+        /// Gets or sets the car models.
+        /// </summary>
+        public virtual DbSet<CarModel> CarModels { get; set; }
+
+        /// <summary>
+        /// Gets or sets the car types.
+        /// </summary>
+        public virtual DbSet<CarType> CarTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fuels.
+        /// </summary>
+        public virtual DbSet<Fuel> Fuels { get; set; }
+
+        /// <summary>
+        /// Gets or sets the paints.
+        /// </summary>
+        public virtual DbSet<Paint> Paints { get; set; }
+
+        /// <summary>
+        /// Gets or sets the sizes.
+        /// </summary>
+        public virtual DbSet<Size> Sizes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the use types.
+        /// </summary>
+        public virtual DbSet<UseType> UseTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the versions.
+        /// </summary>
+        public virtual DbSet<Version> Versions { get; set; }
+
+        /// <summary>
+        /// Gets or sets the parts.
+        /// </summary>
+        public virtual DbSet<Part> Parts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the part types.
+        /// </summary>
+        public virtual DbSet<PartType> PartTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the categories.
+        /// </summary>
+        public virtual DbSet<Category> Categories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the sub categories.
+        /// </summary>
+        public virtual DbSet<SubCategory> SubCategories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the appraisals.
+        /// </summary>
+        public virtual DbSet<Appraisal> Appraisals { get; set; }
+
+        /// <summary>
+        /// Gets or sets the contacts.
+        /// </summary>
+        public virtual DbSet<Contact> Contacts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the persons.
+        /// </summary>
+        public virtual DbSet<Person> Persons { get; set; }
     }
 }

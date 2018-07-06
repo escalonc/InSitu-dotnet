@@ -1,18 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CarType.cs" company="Walltech">
+// <copyright file="ConstructionType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the CarType type.
+//   Define how the part is built
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.CarEvaluationPart
 {
     /// <summary>
-    /// The car type.
+    /// Define how the part is built
     /// </summary>
-    public class CarType
+    public class ConstructionType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -20,8 +20,8 @@ namespace InSitu.Data.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the namme.
         /// </summary>
-        public string Name { get; set; }
+        public string Namme { get; set; }
     }
 }

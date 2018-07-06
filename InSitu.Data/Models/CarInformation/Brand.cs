@@ -1,18 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Version.cs" company="Walltech">
+// <copyright file="Brand.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the Version type.
+//   Defines the Brand type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.CarInformation
 {
     /// <summary>
-    /// The version.
+    /// The brand.
     /// </summary>
-    public class Version
+    public class Brand
     {
         /// <summary>
         /// Gets or sets the id.

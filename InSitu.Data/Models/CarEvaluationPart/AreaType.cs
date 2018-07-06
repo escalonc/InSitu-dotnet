@@ -1,18 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="UseType.cs" company="Walltech">
+// <copyright file="AreaType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   The use type.
+//   Defines the AreaType type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.CarEvaluationPart
 {
     /// <summary>
-    /// The use type.
+    /// The area type.
     /// </summary>
-    public class UseType
+    public class AreaType
     {
         /// <summary>
         /// Gets or sets the id.

@@ -1,18 +1,20 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CarModel.cs" company="Walltech">
+// <copyright file="EvaluationPart.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the CarModel type.
+//   Defines the EvaluationPart type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models
+namespace InSitu.Data.Models.CarEvaluationPart
 {
+    using InSitu.Data.Models.CarParts;
+
     /// <summary>
-    /// The model.
+    /// The evaluation part.
     /// </summary>
-    public class CarModel
+    public abstract class EvaluationPart
     {
         /// <summary>
         /// Gets or sets the id.
@@ -20,8 +22,8 @@ namespace InSitu.Data.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the car part.
         /// </summary>
-        public string Name { get; set; }
+        public virtual Part CarPart { get; set; }
     }
 }
