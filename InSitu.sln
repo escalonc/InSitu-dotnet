@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InSitu.Web", "InSitu.Web\InSitu.Web.csproj", "{DAE72CB8-63F3-4144-8985-5666A85E9073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InSitu.Tests", "InSitu.Tests\InSitu.Tests.csproj", "{9484E774-C0B1-4997-9DB1-68ECBC72584A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAE72CB8-63F3-4144-8985-5666A85E9073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE72CB8-63F3-4144-8985-5666A85E9073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE72CB8-63F3-4144-8985-5666A85E9073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE72CB8-63F3-4144-8985-5666A85E9073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9484E774-C0B1-4997-9DB1-68ECBC72584A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9484E774-C0B1-4997-9DB1-68ECBC72584A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9484E774-C0B1-4997-9DB1-68ECBC72584A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9484E774-C0B1-4997-9DB1-68ECBC72584A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F22626E1-A8E7-442B-858A-D660F54F8FBE}
+	EndGlobalSection
+EndGlobal
