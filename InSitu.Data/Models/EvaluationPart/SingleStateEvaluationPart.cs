@@ -9,10 +9,12 @@
 
 namespace InSitu.Data.Models.EvaluationPart
 {
+    using System.ComponentModel.DataAnnotations.Schema;
+
     /// <summary>
     /// The evaluation part state.
     /// </summary>
-    public enum EvaluationPartState
+    public enum EvaluationStatePart
     {
         /// <summary>
         /// The good.
@@ -34,11 +36,12 @@ namespace InSitu.Data.Models.EvaluationPart
     /// <summary>
     /// The single state evaluation part.
     /// </summary>
+    [Table("SingleStateEvaluationParts")]
     public class SingleStateEvaluationPart : EvaluationPart
     {
         /// <summary>
-        /// Gets or sets the evaluation part state.
+        /// Gets or sets the evaluation state part.
         /// </summary>
-        public EvaluationPartState EvaluationPartState { get; set; }
+        public EvaluationStatePart EvaluationStatePart { get; set; }
     }
 }

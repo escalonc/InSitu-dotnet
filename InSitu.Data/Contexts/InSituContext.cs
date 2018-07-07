@@ -10,6 +10,7 @@
 namespace InSitu.Data.Contexts
 {
     using System.Data.Entity;
+    using System.Data.Entity.Infrastructure.Pluralization;
 
     using InSitu.Data.Models.CarInformation;
     using InSitu.Data.Models.Evaluation;
@@ -28,7 +29,7 @@ namespace InSitu.Data.Contexts
         /// Initializes a new instance of the <see cref="InSituContext"/> class.
         /// </summary>
         public InSituContext()
-            : base("DefultConnection")
+            : base("InSitu")
         {
         }
 
@@ -137,6 +138,12 @@ namespace InSitu.Data.Contexts
         /// </summary>
         public virtual DbSet<PartTypeSubCategory> PartTypeSubCategories { get; set; }
 
+        public virtual DbSet<CompositeEvaluationPart> CompositeEvaluationParts { get; set; }
+
+        public virtual DbSet<SingleStateEvaluationPart> SingleStateEvaluationParts { get; set; }
+
+        public virtual DbSet<GeneralEvaluationPart> GeneralEvaluationParts { get; set; }
+
         /// <summary>
         /// Gets or sets the contacts.
         /// </summary>
@@ -146,5 +153,17 @@ namespace InSitu.Data.Contexts
         /// Gets or sets the persons.
         /// </summary>
         public virtual DbSet<Person> Persons { get; set; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// The on model creating.
+        /// </summary>
+        /// <param name="modelBuilder">
+        /// The model builder.
+        /// </param>
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

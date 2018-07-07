@@ -10,11 +10,13 @@
 namespace InSitu.Data.Models.EvaluationPart
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     /// <inheritdoc />
     /// <summary>
     /// The special evaluation part.
     /// </summary>
+    [Table("SpecialEvaluationParts")]
     public class SpecialEvaluationPart : EvaluationPart
     {
         /// <summary>

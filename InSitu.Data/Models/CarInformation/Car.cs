@@ -88,7 +88,7 @@ namespace InSitu.Data.Models.CarInformation
         /// <summary>
         /// Gets or sets the person.
         /// </summary>
-        public virtual Person Person { get; set; }
+        public virtual Customer Customer { get; set; }
 
         /// <summary>
         /// Gets or sets the parts.
