@@ -138,11 +138,6 @@ namespace InSitu.Data.Contexts
         public virtual DbSet<PartTypeSubCategory> PartTypeSubCategories { get; set; }
 
         /// <summary>
-        /// Gets or sets the sub categories.
-        /// </summary>
-        public virtual DbSet<PartTypeSubCategory> SubCategories { get; set; }
-
-        /// <summary>
         /// Gets or sets the contacts.
         /// </summary>
         public virtual DbSet<Contact> Contacts { get; set; }

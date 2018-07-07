@@ -30,15 +30,5 @@ namespace InSitu.Data.Models.Parts
         /// Gets or sets the car parts.
         /// </summary>
         public virtual ICollection<Part> Parts { get; set; } = new HashSet<Part>();
-
-        /// <summary>
-        /// Gets or sets the part type categories.
-        /// </summary>
-        public virtual ICollection<PartTypeCategory> PartTypeCategories { get; set; } = new HashSet<PartTypeCategory>();
-
-        /// <summary>
-        /// Gets or sets the part type categories.
-        /// </summary>
-        public virtual ICollection<PartTypeSubCategory> PartTypeSubCategories { get; set; } = new HashSet<PartTypeSubCategory>();
     }
 }

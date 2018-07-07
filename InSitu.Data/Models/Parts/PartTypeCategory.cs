@@ -27,13 +27,13 @@ namespace InSitu.Data.Models.Parts
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or sets the part type sub category.
+        /// </summary>
+        public virtual PartTypeSubCategory PartTypeSubCategory { get; set; }
+
+        /// <summary>
         /// Gets or sets the car parts.
         /// </summary>
         public virtual ICollection<PartType> PartTypes { get; set; } = new HashSet<PartType>();
-
-        /// <summary>
-        /// Gets or sets the sub categories.
-        /// </summary>
-        public virtual ICollection<PartTypeSubCategory> PartTypeSubCategories { get; set; } = new HashSet<PartTypeSubCategory>();
     }
 }

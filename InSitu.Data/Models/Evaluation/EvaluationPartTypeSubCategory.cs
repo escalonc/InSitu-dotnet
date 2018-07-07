@@ -30,11 +30,6 @@ namespace InSitu.Data.Models.Evaluation
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the evaluation part category.
-        /// </summary>
-        public virtual EvaluationPartTypeCategory EvaluationPartCategory { get; set; }
-
-        /// <summary>
         /// Gets or sets the car parts.
         /// </summary>
         public virtual ICollection<PartType> PartTypes { get; set; } = new HashSet<PartType>();
