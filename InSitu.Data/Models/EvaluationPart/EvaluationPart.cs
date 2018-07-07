@@ -9,9 +9,6 @@
 
 namespace InSitu.Data.Models.EvaluationPart
 {
-    using System.Collections.Generic;
-
-    using InSitu.Data.Models.Evaluation;
     using InSitu.Data.Models.Parts;
 
     /// <summary>

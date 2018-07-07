@@ -31,9 +31,14 @@ namespace InSitu.Data.Models.Evaluation
         public virtual Car Car { get; set; }
 
         /// <summary>
-        /// Gets or sets the person.
+        /// Gets or sets the owner.
         /// </summary>
-        public virtual Person Person { get; set; }
+        public virtual Person Owner { get; set; }
+
+        /// <summary>
+        /// Gets or sets the evaluator.
+        /// </summary>
+        public virtual Person Evaluator { get; set; }
 
         /// <summary>
         /// Gets or sets the evaluation parts.
