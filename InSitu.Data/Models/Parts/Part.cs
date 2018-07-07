@@ -1,18 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Paint.cs" company="Walltech">
+// <copyright file="CarPart.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the Paint type.
+//   The car part.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarInformation
+namespace InSitu.Data.Models.Parts
 {
     /// <summary>
-    /// The paint.
+    /// The car part.
     /// </summary>
-    public class Paint
+    public class Part
     {
         /// <summary>
         /// Gets or sets the id.
@@ -23,5 +23,10 @@ namespace InSitu.Data.Models.CarInformation
         /// Gets or sets the name.
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the car part type.
+        /// </summary>
+        public virtual PartType PartType { get; set; }
     }
 }

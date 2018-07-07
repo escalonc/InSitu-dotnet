@@ -1,20 +1,23 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Category.cs" company="Walltech">
+// <copyright file="EvaluationPartSubCategory.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   The category.
+//   Defines the EvaluationPartSubCategory type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarParts
+namespace InSitu.Data.Models.Evaluation
 {
     using System.Collections.Generic;
 
+    using InSitu.Data.Models.EvaluationPart;
+    using InSitu.Data.Models.Parts;
+
     /// <summary>
-    /// The category.
+    /// The evaluation part sub category.
     /// </summary>
-    public class Category
+    public class EvaluationPartTypeSubCategory
     {
         /// <summary>
         /// Gets or sets the id.
@@ -27,13 +30,13 @@ namespace InSitu.Data.Models.CarParts
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the car parts.
+        /// Gets or sets the evaluation part category.
         /// </summary>
-        public ICollection<PartType> CarPartTypesarts { get; set; } = new HashSet<PartType>();
+        public virtual EvaluationPartTypeCategory EvaluationPartCategory { get; set; }
 
         /// <summary>
-        /// Gets or sets the sub categories.
+        /// Gets or sets the car parts.
         /// </summary>
-        public virtual ICollection<SubCategory> SubCategories { get; set; } = new HashSet<SubCategory>();
+        public virtual ICollection<PartType> PartTypes { get; set; } = new HashSet<PartType>();
     }
 }

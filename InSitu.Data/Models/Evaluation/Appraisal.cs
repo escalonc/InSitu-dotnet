@@ -11,8 +11,8 @@ namespace InSitu.Data.Models.Evaluation
 {
     using System.Collections.Generic;
 
-    using InSitu.Data.Models.CarEvaluationPart;
     using InSitu.Data.Models.CarInformation;
+    using InSitu.Data.Models.EvaluationPart;
     using InSitu.Data.Models.Person;
 
     /// <summary>

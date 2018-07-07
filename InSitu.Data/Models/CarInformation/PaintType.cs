@@ -1,18 +1,20 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConstructionType.cs" company="Walltech">
+// <copyright file="PaintType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Define how the part is built
+//   Defines the Paint type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarEvaluationPart
+namespace InSitu.Data.Models.CarInformation
 {
+    using System.Collections.Generic;
+
     /// <summary>
-    /// Define how the part is built
+    /// The paint.
     /// </summary>
-    public class ConstructionType
+    public class PaintType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -20,8 +22,13 @@ namespace InSitu.Data.Models.CarEvaluationPart
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the namme.
+        /// Gets or sets the name.
         /// </summary>
-        public string Namme { get; set; }
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the cars.
+        /// </summary>
+        public virtual ICollection<Car> Cars { get; set; } = new HashSet<Car>();
     }
 }

@@ -7,14 +7,14 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarParts
+namespace InSitu.Data.Models.Parts
 {
     using System.Collections.Generic;
 
     /// <summary>
     /// The sub category.
     /// </summary>
-    public class SubCategory
+    public class PartTypeSubCategory
     {
         /// <summary>
         /// Gets or sets the id.
@@ -25,6 +25,11 @@ namespace InSitu.Data.Models.CarParts
         /// Gets or sets the name.
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the part type category.
+        /// </summary>
+        public virtual PartTypeCategory PartTypeCategory { get; set; }
 
         /// <summary>
         /// Gets or sets the car part types.

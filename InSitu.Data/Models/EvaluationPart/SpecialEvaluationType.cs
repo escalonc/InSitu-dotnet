@@ -1,20 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Version.cs" company="Walltech">
+// <copyright file="SpecialEvaluationType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the Version type.
+//   The special evaluation type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarInformation
+namespace InSitu.Data.Models.EvaluationPart
 {
-    using System.Collections.Generic;
-
     /// <summary>
-    /// The version.
+    /// The special evaluation type.
     /// </summary>
-    public class Version
+    public class SpecialEvaluationType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -25,10 +23,5 @@ namespace InSitu.Data.Models.CarInformation
         /// Gets or sets the name.
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the cars.
-        /// </summary>
-        public virtual ICollection<Car> Cars { get; set; } = new HashSet<Car>();
     }
 }

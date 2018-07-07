@@ -55,17 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\InSituContext.cs" />
-    <Compile Include="Models\CarEvaluationPart\AreaType.cs" />
-    <Compile Include="Models\CarEvaluationPart\CompositeEvaluationPart.cs" />
-    <Compile Include="Models\CarEvaluationPart\ConstructionType.cs" />
-    <Compile Include="Models\CarEvaluationPart\EvaluationPart.cs" />
-    <Compile Include="Models\CarEvaluationPart\GeneralEvaluationPart.cs" />
-    <Compile Include="Models\CarEvaluationPart\SingleStateEvaluationPart.cs" />
-    <Compile Include="Models\CarEvaluationPart\SourceType.cs" />
-    <Compile Include="Models\CarParts\Part.cs" />
-    <Compile Include="Models\CarParts\PartType.cs" />
-    <Compile Include="Models\CarParts\Category.cs" />
-    <Compile Include="Models\CarParts\SubCategory.cs" />
+    <Compile Include="Models\EvaluationPart\AreaType.cs" />
+    <Compile Include="Models\EvaluationPart\CompositeEvaluationPart.cs" />
+    <Compile Include="Models\EvaluationPart\ConstructionType.cs" />
+    <Compile Include="Models\EvaluationPart\EvaluationPart.cs" />
+    <Compile Include="Models\EvaluationPart\GeneralEvaluationPart.cs" />
+    <Compile Include="Models\EvaluationPart\SingleStateEvaluationPart.cs" />
+    <Compile Include="Models\EvaluationPart\SourceType.cs" />
+    <Compile Include="Models\EvaluationPart\SpecialEvaluationPart.cs" />
+    <Compile Include="Models\EvaluationPart\SpecialEvaluationType.cs" />
+    <Compile Include="Models\Evaluation\EvaluationPartTypeCategory.cs" />
+    <Compile Include="Models\Evaluation\EvaluationPartTypeSubCategory.cs" />
+    <Compile Include="Models\Parts\Part.cs" />
+    <Compile Include="Models\Parts\PartType.cs" />
+    <Compile Include="Models\Parts\PartTypeCategory.cs" />
+    <Compile Include="Models\Parts\PartTypeSubCategory.cs" />
     <Compile Include="Models\Evaluation\Appraisal.cs" />
     <Compile Include="Models\CarInformation\Brand.cs" />
     <Compile Include="Models\CarInformation\Car.cs" />
@@ -75,8 +79,8 @@
     <Compile Include="Models\Person\Contact.cs" />
     <Compile Include="Models\Person\Customer.cs" />
     <Compile Include="Models\Evaluation\Evaluator.cs" />
-    <Compile Include="Models\CarInformation\Fuel.cs" />
-    <Compile Include="Models\CarInformation\Paint.cs" />
+    <Compile Include="Models\CarInformation\FuelType.cs" />
+    <Compile Include="Models\CarInformation\PaintType.cs" />
     <Compile Include="Models\Person\Person.cs" />
     <Compile Include="Models\CarInformation\UseType.cs" />
     <Compile Include="Models\CarInformation\Version.cs" />

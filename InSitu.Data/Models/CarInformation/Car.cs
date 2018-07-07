@@ -12,7 +12,7 @@ namespace InSitu.Data.Models.CarInformation
     using System.Collections.Generic;
     using System.Drawing;
 
-    using InSitu.Data.Models.CarParts;
+    using InSitu.Data.Models.Parts;
     using InSitu.Data.Models.Person;
 
     /// <summary>
@@ -36,6 +36,11 @@ namespace InSitu.Data.Models.CarInformation
         public string Vin { get; set; }
 
         /// <summary>
+        /// Gets or sets the license plate.
+        /// </summary>
+        public string LicensePlate { get; set; }
+
+        /// <summary>
         /// Gets or sets the color.
         /// </summary>
         public Color Color { get; set; }
@@ -51,16 +56,6 @@ namespace InSitu.Data.Models.CarInformation
         public CarModel CarModel { get; set; }
 
         /// <summary>
-        /// Gets or sets the use type.
-        /// </summary>
-        public UseType UseType { get; set; }
-
-        /// <summary>
-        /// Gets or sets the license plate.
-        /// </summary>
-        public string LicensePlate { get; set; }
-
-        /// <summary>
         /// Gets or sets the version.
         /// </summary>
         public virtual Version Version { get; set; }
@@ -71,14 +66,24 @@ namespace InSitu.Data.Models.CarInformation
         public virtual CarType CarType { get; set; }
 
         /// <summary>
-        /// Gets or sets the car size.
+        /// Gets or sets the fuel type.
         /// </summary>
-        public virtual Size CarSize { get; set; }
+        public virtual FuelType FuelType { get; set; }
 
         /// <summary>
-        /// Gets or sets the paint.
+        /// Gets or sets the paint type.
         /// </summary>
-        public virtual Paint Paint { get; set; }
+        public virtual PaintType PaintType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the car size.
+        /// </summary>
+        public virtual Size Size { get; set; }
+
+        /// <summary>
+        /// Gets or sets the use type.
+        /// </summary>
+        public UseType UseType { get; set; }
 
         /// <summary>
         /// Gets or sets the person.

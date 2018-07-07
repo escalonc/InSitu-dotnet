@@ -9,6 +9,8 @@
 
 namespace InSitu.Data.Models.CarInformation
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// The brand.
     /// </summary>
@@ -23,5 +25,10 @@ namespace InSitu.Data.Models.CarInformation
         /// Gets or sets the name.
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the cars.
+        /// </summary>
+        public virtual ICollection<Car> Cars { get; set; } = new HashSet<Car>();
     }
 }

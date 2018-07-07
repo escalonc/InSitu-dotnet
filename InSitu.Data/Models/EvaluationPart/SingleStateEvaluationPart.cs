@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarEvaluationPart
+namespace InSitu.Data.Models.EvaluationPart
 {
     /// <summary>
     /// The evaluation part state.

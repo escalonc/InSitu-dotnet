@@ -11,10 +11,10 @@ namespace InSitu.Data.Contexts
 {
     using System.Data.Entity;
 
-    using InSitu.Data.Models.CarEvaluationPart;
     using InSitu.Data.Models.CarInformation;
-    using InSitu.Data.Models.CarParts;
     using InSitu.Data.Models.Evaluation;
+    using InSitu.Data.Models.EvaluationPart;
+    using InSitu.Data.Models.Parts;
     using InSitu.Data.Models.Person;
 
     /// <inheritdoc />
@@ -31,26 +31,6 @@ namespace InSitu.Data.Contexts
             : base("DefultConnection")
         {
         }
-
-        /// <summary>
-        /// Gets or sets the area types.
-        /// </summary>
-        public virtual DbSet<AreaType> AreaTypes { get; set; }
-
-        /// <summary>
-        /// Gets or sets the evaluation parts.
-        /// </summary>
-        public virtual DbSet<EvaluationPart> EvaluationParts { get; set; }
-
-        /// <summary>
-        /// Gets or sets the construction types.
-        /// </summary>
-        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; }
-
-        /// <summary>
-        /// Gets or sets the source types.
-        /// </summary>
-        public virtual DbSet<SourceType> SourceTypes { get; set; }
 
         /// <summary>
         /// Gets or sets the brands.
@@ -75,12 +55,12 @@ namespace InSitu.Data.Contexts
         /// <summary>
         /// Gets or sets the fuels.
         /// </summary>
-        public virtual DbSet<Fuel> Fuels { get; set; }
+        public virtual DbSet<FuelType> FuelTypes { get; set; }
 
         /// <summary>
         /// Gets or sets the paints.
         /// </summary>
-        public virtual DbSet<Paint> Paints { get; set; }
+        public virtual DbSet<PaintType> PaintTypes { get; set; }
 
         /// <summary>
         /// Gets or sets the sizes.
@@ -98,6 +78,46 @@ namespace InSitu.Data.Contexts
         public virtual DbSet<Version> Versions { get; set; }
 
         /// <summary>
+        /// Gets or sets the appraisals.
+        /// </summary>
+        public virtual DbSet<Appraisal> Appraisals { get; set; }
+
+        /// <summary>
+        /// Gets or sets the evaluation part type categories.
+        /// </summary>
+        public virtual DbSet<EvaluationPartTypeCategory> EvaluationPartTypeCategories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the evaluation part type categories.
+        /// </summary>
+        public virtual DbSet<EvaluationPartTypeSubCategory> EvaluationPartTypeSubCategories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the area types.
+        /// </summary>
+        public virtual DbSet<AreaType> AreaTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the evaluation parts.
+        /// </summary>
+        public virtual DbSet<EvaluationPart> EvaluationParts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the construction types.
+        /// </summary>
+        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the source types.
+        /// </summary>
+        public virtual DbSet<SourceType> SourceTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the special evaluation types.
+        /// </summary>
+        public virtual DbSet<SpecialEvaluationType> SpecialEvaluationTypes { get; set; }
+
+        /// <summary>
         /// Gets or sets the parts.
         /// </summary>
         public virtual DbSet<Part> Parts { get; set; }
@@ -110,17 +130,17 @@ namespace InSitu.Data.Contexts
         /// <summary>
         /// Gets or sets the categories.
         /// </summary>
-        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<PartTypeCategory> PartTypeCategories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the part type sub categories.
+        /// </summary>
+        public virtual DbSet<PartTypeSubCategory> PartTypeSubCategories { get; set; }
 
         /// <summary>
         /// Gets or sets the sub categories.
         /// </summary>
-        public virtual DbSet<SubCategory> SubCategories { get; set; }
-
-        /// <summary>
-        /// Gets or sets the appraisals.
-        /// </summary>
-        public virtual DbSet<Appraisal> Appraisals { get; set; }
+        public virtual DbSet<PartTypeSubCategory> SubCategories { get; set; }
 
         /// <summary>
         /// Gets or sets the contacts.

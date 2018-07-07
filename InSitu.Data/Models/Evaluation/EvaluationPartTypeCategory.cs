@@ -1,20 +1,22 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SourceType.cs" company="Walltech">
+// <copyright file="EvaluationPartCategory.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   The source type.
+//   Defines the EvaluationPartCategory type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarEvaluationPart
+namespace InSitu.Data.Models.Evaluation
 {
     using System.Collections.Generic;
 
+    using InSitu.Data.Models.Parts;
+
     /// <summary>
-    /// The source type.
+    /// The evaluation part category.
     /// </summary>
-    public class SourceType
+    public class EvaluationPartTypeCategory
     {
         /// <summary>
         /// Gets or sets the id.
@@ -27,8 +29,13 @@ namespace InSitu.Data.Models.CarEvaluationPart
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the area types.
+        /// Gets or sets the car parts.
         /// </summary>
-        public virtual ICollection<AreaType> AreaTypes { get; set; } = new HashSet<AreaType>();
+        public virtual ICollection<PartType> PartTypes { get; set; } = new HashSet<PartType>();
+
+        /// <summary>
+        /// Gets or sets the sub categories.
+        /// </summary>
+        public virtual ICollection<EvaluationPartTypeSubCategory> EvaluationPartTypeSubCategories { get; set; } = new HashSet<EvaluationPartTypeSubCategory>();
     }
 }

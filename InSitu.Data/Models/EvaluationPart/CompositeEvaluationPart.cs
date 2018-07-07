@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarEvaluationPart
+namespace InSitu.Data.Models.EvaluationPart
 {
     using System.Collections.Generic;
 

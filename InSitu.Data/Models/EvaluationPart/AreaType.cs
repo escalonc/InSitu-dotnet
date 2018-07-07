@@ -1,18 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CarPart.cs" company="Walltech">
+// <copyright file="AreaType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   The car part.
+//   Defines the AreaType type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarParts
+namespace InSitu.Data.Models.EvaluationPart
 {
     /// <summary>
-    /// The car part.
+    /// The area type.
     /// </summary>
-    public class Part
+    public class AreaType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -23,10 +23,5 @@ namespace InSitu.Data.Models.CarParts
         /// Gets or sets the name.
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the car part type.
-        /// </summary>
-        public virtual PartType CarPartType { get; set; }
     }
 }

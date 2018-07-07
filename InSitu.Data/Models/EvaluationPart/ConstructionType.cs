@@ -1,20 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Version.cs" company="Walltech">
+// <copyright file="ConstructionType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the Version type.
+//   Define how the part is built
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarInformation
+namespace InSitu.Data.Models.EvaluationPart
 {
-    using System.Collections.Generic;
-
     /// <summary>
-    /// The version.
+    /// Define how the part is built
     /// </summary>
-    public class Version
+    public class ConstructionType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -22,13 +20,8 @@ namespace InSitu.Data.Models.CarInformation
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the namme.
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the cars.
-        /// </summary>
-        public virtual ICollection<Car> Cars { get; set; } = new HashSet<Car>();
     }
 }

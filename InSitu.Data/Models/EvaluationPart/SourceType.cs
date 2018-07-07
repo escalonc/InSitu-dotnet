@@ -1,20 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="EvaluationPart.cs" company="Walltech">
+// <copyright file="SourceType.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the EvaluationPart type.
+//   The source type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarEvaluationPart
+namespace InSitu.Data.Models.EvaluationPart
 {
-    using InSitu.Data.Models.CarParts;
-
     /// <summary>
-    /// The evaluation part.
+    /// The source type.
     /// </summary>
-    public abstract class EvaluationPart
+    public class SourceType
     {
         /// <summary>
         /// Gets or sets the id.
@@ -22,8 +20,13 @@ namespace InSitu.Data.Models.CarEvaluationPart
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the car part.
+        /// Gets or sets the name.
         /// </summary>
-        public virtual Part CarPart { get; set; }
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the area type.
+        /// </summary>
+        public virtual AreaType AreaType { get; set; }
     }
 }

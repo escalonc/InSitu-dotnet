@@ -1,18 +1,23 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AreaType.cs" company="Walltech">
+// <copyright file="EvaluationPart.cs" company="Walltech">
 //   Copyright (c) Walltech. All rights reserved.
 // </copyright>
 // <summary>
-//   Defines the AreaType type.
+//   Defines the EvaluationPart type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace InSitu.Data.Models.CarEvaluationPart
+namespace InSitu.Data.Models.EvaluationPart
 {
+    using System.Collections.Generic;
+
+    using InSitu.Data.Models.Evaluation;
+    using InSitu.Data.Models.Parts;
+
     /// <summary>
-    /// The area type.
+    /// The evaluation part.
     /// </summary>
-    public class AreaType
+    public abstract class EvaluationPart
     {
         /// <summary>
         /// Gets or sets the id.
@@ -20,8 +25,8 @@ namespace InSitu.Data.Models.CarEvaluationPart
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the car part.
         /// </summary>
-        public string Name { get; set; }
+        public virtual Part Part { get; set; }
     }
 }
