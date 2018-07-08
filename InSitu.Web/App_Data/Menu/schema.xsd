@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MenuConfiguration" nillable="true" type="MenuConfiguration" />
+  <xs:complexType name="MenuConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Groups" type="ArrayOfGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Controller" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Action" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BaseItem" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ResourceKey" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Icon" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Role" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Group">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="Group" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
