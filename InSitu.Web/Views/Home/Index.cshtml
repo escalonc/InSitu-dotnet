@@ -1,33 +1,5 @@
 ﻿@using InSitu.Web.Utilities.Menu;
 
 @{
-    ViewBag.Title = "Home Page";
-}
-
-@{
-    foreach (var element in MenuConfigurationFactory.Create().Sections)
-    {
-        if (element is Item item)
-        {
-            Html.Raw(item.Action);
-            Html.Raw(item.Controller);
-            Html.Raw(item.ResourceKey);
-            Html.Raw(item.Icon);
-        }
-        else
-        {
-            var group = element as Group;
-
-            Html.Raw(group.Icon);
-            Html.Raw(group.ResourceKey);
-
-            foreach (var child in group.Items)
-            {
-                Html.Raw(child.Action);
-                Html.Raw(child.Controller);
-                Html.Raw(child.ResourceKey);
-                Html.Raw(child.Icon);
-            }
-        }
-    }
+    ViewBag.Title = InSitu.Resources.Menu.Menu.Home;
 }

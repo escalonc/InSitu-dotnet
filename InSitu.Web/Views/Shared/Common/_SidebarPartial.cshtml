@@ -1,4 +1,5 @@
-﻿<div class="left-side-bar">
+﻿@using InSitu.Web.Utilities.Menu
+<div class="left-side-bar">
     <div class="brand-logo">
         <a href="javascript:void(0)">
             <img src="~/Content/Images/logo.png" alt="">
@@ -7,16 +8,33 @@
     <div class="menu-block customscroll">
         <div class="sidebar-menu">
             <ul id="accordion-menu">
-                <li>
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="fa fa-home"></span><span class="mtext">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="calendar.php" class="dropdown-toggle no-arrow">
-                        <span class="fa fa-calendar-o"></span><span class="mtext">Calendar</span>
-                    </a>
-                </li>
+                @foreach (var item in @MenuConfigurationFactory.Create().Items)
+                {
+                    <li>
+                        <a href="@Url.Action(item.Action, item.Controller)" class="dropdown-toggle no-arrow">
+                            <span class="@item.Icon"></span>
+                            <span class="mtext">@item.Text</span>
+                        </a>
+                    </li>
+                }
+
+                @foreach (var group in @MenuConfigurationFactory.Create().Groups)
+                {
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="@group.Icon"></span>
+                            <span class="mtext">@group.Text</span>
+                        </a>
+                        <ul class="submenu">
+                            @foreach (var item in group.Items)
+                            {
+                                <li>
+                                    @Html.ActionLink(item.Text, item.Action, item.Controller)
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
             </ul>
         </div>
     </div>

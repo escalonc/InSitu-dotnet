@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MenuConfiguration>
   <Items>
-    <Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
     <Item>
-      <ResourceKey>ResourceKey1</ResourceKey>
-      <Icon>Icon1</Icon>
-      <Role>Role1</Role>
-      <Controller>Controller1</Controller>
-      <Action>Action1</Action>
+      <ResourceKey>Home</ResourceKey>
+      <Icon>fa fa-home</Icon>
+      <Role>default</Role>
+      <Controller>Home</Controller>
+      <Action>Index</Action>
     </Item>
-    <Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
   </Items>
   <Groups>
-    <Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
     <Group>
-      <ResourceKey>ResourceKey1</ResourceKey>
-      <Icon>Icon1</Icon>
-      <Role>Role1</Role>
+      <ResourceKey>CarData</ResourceKey>
+      <Icon>fa fa-pencil</Icon>
+      <Role>evaluator</Role>
       <Items>
-        <Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
         <Item>
-          <ResourceKey>ResourceKey2</ResourceKey>
-          <Icon>Icon2</Icon>
-          <Role>Role2</Role>
-          <Controller>Controller2</Controller>
-          <Action>Action2</Action>
+          <ResourceKey>Brands</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>Brands</Controller>
+          <Action>Index</Action>
         </Item>
-        <Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
       </Items>
     </Group>
-    <Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
   </Groups>
 </MenuConfiguration>

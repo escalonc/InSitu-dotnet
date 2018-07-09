@@ -61,6 +61,24 @@ namespace InSitu.Resources.Menu {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Marcas.
+        /// </summary>
+        public static string Brands {
+            get {
+                return ResourceManager.GetString("Brands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datos de vehículos.
+        /// </summary>
+        public static string CarData {
+            get {
+                return ResourceManager.GetString("CarData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
