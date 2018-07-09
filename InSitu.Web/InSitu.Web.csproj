@@ -5265,7 +5265,9 @@
     <Content Include="Views\Brands\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
@@ -5292,14 +5294,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\bootbox\index.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery-validation-unobtrusive\jquery-validation-unobtrusive.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.dataTables\jquery.dataTables-1.9.4.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.dataTables\jquery.dataTables.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery.validation\jquery.validation.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AppScripts\Brand\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
