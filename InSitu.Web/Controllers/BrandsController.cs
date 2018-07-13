@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace InSitu.Web.Controllers
 {
+    using InSitu.Data.Models.CarInformation;
+    using InSitu.Data.Repositories;
+
     public class BrandsController : Controller
     {
         // GET: Brands

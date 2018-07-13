@@ -43,7 +43,8 @@ namespace InSitu.Web
                 "~/Content/Theme/src/plugins/datatables/media/js/button/buttons.html5.js",
                 "~/Content/Theme/src/plugins/datatables/media/js/button/buttons.flash.js",
                 "~/Content/Theme/src/plugins/datatables/media/js/button/pdfmake.min.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/vfs_fonts.js")
+                "~/Content/Theme/src/plugins/datatables/media/js/button/vfs_fonts.js",
+                "~/Scripts/jquery.dataTables.odata.js")
                 .IncludeDirectory("~/Scripts/AppScripts", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));

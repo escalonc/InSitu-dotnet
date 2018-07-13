@@ -1,25 +1,24 @@
-﻿@model InSitu.Web.Models.BrandViewModel
+﻿@using InSitu.Resources.Menu
+@using InSitu.Resources.Table
+@using Microsoft.OData.UriParser
+@model InSitu.Web.Models.BrandViewModel
 
 @{
-    ViewBag.Title = @InSitu.Resources.Menu.Menu.Brands;
+    ViewBag.Title = MenuResource.Brands;
 }
 
 <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
     <div class="clearfix mb-20">
         <div class="pull-left">
-            <h5 class="text-blue">@InSitu.Resources.Menu.Menu.Brands</h5>
+            <h5 class="text-blue">@MenuResource.Brands</h5>
         </div>
     </div>
     <div class="row">
-        <table class="data-table stripe hover nowrap">
+        <table class="data-table stripe hover nowrap" id="brands">
             <thead>
                 <tr>
-                    <th class="table-plus datatable-nosort">Name</th>
-                    <th>Age</th>
-                    <th>Office</th>
-                    <th>Address</th>
-                    <th>Start Date</th>
-                    <th class="datatable-nosort">Action</th>
+                    <th>Cod</th>
+                    <th>Name</th>
                 </tr>
             </thead>
         </table>
@@ -30,7 +29,24 @@
 {
     <script>
         $(function () {
-            brand.init();
+            $("#brands").DataTable({
+                "sAjaxSource": "@Url.OdataUrl("ODataRoute", new DynamicPathSegment("Brands"))",
+                "iODataVersion": 4,
+                "aoColumns": [
+                    { mData: "Id" },
+                    { mData: "Name" }
+                ],
+                "language": {
+                    "url": "@Url.Content("~/Scripts/translations/spanish.json")"
+                },
+                "processing": true,
+                "columnDefs": [
+                    { "width": "10%", "targets": 0 }
+                ],
+                "fnServerData": fnServerOData,
+                "bServerSide": true,
+                "bUseODataViaJSONP": false
+            });
         });
     </script>
 }

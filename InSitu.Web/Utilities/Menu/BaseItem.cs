@@ -35,6 +35,6 @@ namespace InSitu.Web.Utilities.Menu
         /// <summary>
         /// The text.
         /// </summary>
-        public string Text => Resources.Menu.Menu.ResourceManager.GetString(this.ResourceKey);
+        public string Text => Resources.Menu.MenuResource.ResourceManager.GetString(this.ResourceKey);
     }
 }

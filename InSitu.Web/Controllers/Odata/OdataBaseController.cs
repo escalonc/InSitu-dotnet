@@ -19,6 +19,8 @@ namespace InSitu.Web.Controllers.Odata
 
     using Microsoft.AspNet.OData;
 
+    using Ninject;
+
     /// <inheritdoc />
     /// <summary>
     /// OData controller with common actions.
