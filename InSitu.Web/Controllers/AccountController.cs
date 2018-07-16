@@ -12,6 +12,8 @@ using InSitu.Web.Models;
 
 namespace InSitu.Web.Controllers
 {
+    using InSitu.Data.Models.Person;
+
     [Authorize]
     public class AccountController : Controller
     {

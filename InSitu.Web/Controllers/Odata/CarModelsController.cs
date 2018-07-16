@@ -1,33 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.Http.Description;
-using InSitu.Data.Contexts;
-using InSitu.Data.Models.CarInformation;
 
 namespace InSitu.Web.Controllers.Odata
 {
+    using InSitu.Data.Models.CarInformation;
     using InSitu.Data.Repositories;
 
-    public class CarModelsController : ApiController
+    public class CarModelsController : OdataBaseController<CarModel, int>
     {
-        private readonly BaseRepository<CarModel> carModelRepository;
-
-        public CarModelsController(BaseRepository<CarModel> carModelRepository)
+        public CarModelsController(BaseRepository<CarModel> repository)
+            : base(repository)
         {
-            this.carModelRepository = carModelRepository;
         }
 
-        public string Get()
+        public override IQueryable<CarModel> CreateSingle(int key)
         {
-            return "Hello";
+            throw new NotImplementedException();
+        }
+
+        public override bool EntityExists(int key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool EntityExists(CarModel entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

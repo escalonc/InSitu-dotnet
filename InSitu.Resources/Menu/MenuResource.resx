@@ -106,4 +106,25 @@
   <data name="Brands" xml:space="preserve">
     <value>Marcas</value>
   </data>
+  <data name="CarModels" xml:space="preserve">
+    <value>Modelos</value>
+  </data>
+  <data name="CarTypes" xml:space="preserve">
+    <value>Tipos</value>
+  </data>
+  <data name="Sizes" xml:space="preserve">
+    <value>Tamaños</value>
+  </data>
+  <data name="UseTypes" xml:space="preserve">
+    <value>Tipos de uso</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versiones</value>
+  </data>
+  <data name="FuelTypes" xml:space="preserve">
+    <value>Combustible</value>
+  </data>
+  <data name="PaintTypes" xml:space="preserve">
+    <value>Pintura</value>
+  </data>
 </root>

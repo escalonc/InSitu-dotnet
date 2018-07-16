@@ -10,7 +10,6 @@
 namespace InSitu.Data.Contexts
 {
     using System.Data.Entity;
-    using System.Data.Entity.Infrastructure.Pluralization;
 
     using InSitu.Data.Models.CarInformation;
     using InSitu.Data.Models.Evaluation;
@@ -18,11 +17,13 @@ namespace InSitu.Data.Contexts
     using InSitu.Data.Models.Parts;
     using InSitu.Data.Models.Person;
 
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     /// <inheritdoc />
     /// <summary>
     /// The in situ context.
     /// </summary>
-    public class InSituContext : DbContext
+    public class InSituContext : IdentityDbContext<ApplicationUser>
     {
         /// <inheritdoc />
         /// <summary>
@@ -76,7 +77,7 @@ namespace InSitu.Data.Contexts
         /// <summary>
         /// Gets or sets the versions.
         /// </summary>
-        public virtual DbSet<Version> Versions { get; set; }
+        public virtual DbSet<CarVersion> CarVersions { get; set; }
 
         /// <summary>
         /// Gets or sets the appraisals.
@@ -138,10 +139,19 @@ namespace InSitu.Data.Contexts
         /// </summary>
         public virtual DbSet<PartTypeSubCategory> PartTypeSubCategories { get; set; }
 
+        /// <summary>
+        /// Gets or sets the composite evaluation parts.
+        /// </summary>
         public virtual DbSet<CompositeEvaluationPart> CompositeEvaluationParts { get; set; }
 
+        /// <summary>
+        /// Gets or sets the single state evaluation parts.
+        /// </summary>
         public virtual DbSet<SingleStateEvaluationPart> SingleStateEvaluationParts { get; set; }
 
+        /// <summary>
+        /// Gets or sets the general evaluation parts.
+        /// </summary>
         public virtual DbSet<GeneralEvaluationPart> GeneralEvaluationParts { get; set; }
 
         /// <summary>
@@ -154,16 +164,15 @@ namespace InSitu.Data.Contexts
         /// </summary>
         public virtual DbSet<Person> Persons { get; set; }
 
-        /// <inheritdoc />
         /// <summary>
-        /// The on model creating.
+        /// The create.
         /// </summary>
-        /// <param name="modelBuilder">
-        /// The model builder.
-        /// </param>
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        /// <returns>
+        /// The <see cref="InSituContext"/>.
+        /// </returns>
+        public static InSituContext Create()
         {
-            base.OnModelCreating(modelBuilder);
+            return new InSituContext();
         }
     }
 }

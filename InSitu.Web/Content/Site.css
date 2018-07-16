@@ -1,3 +1,7 @@
 ﻿.brand-logo {
     background: #2C2424
 }
+
+.ball-pulse > div {
+    background-color: dodgerblue;
+}

@@ -32,19 +32,22 @@ namespace InSitu.Web
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/vendor").Include(
-                "~/Content/Theme/vendors/scripts/script.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/jquery.dataTables.min.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/dataTables.bootstrap4.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/dataTables.responsive.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/responsive.bootstrap4.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/dataTables.buttons.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/buttons.bootstrap4.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/buttons.print.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/buttons.html5.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/buttons.flash.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/pdfmake.min.js",
-                "~/Content/Theme/src/plugins/datatables/media/js/button/vfs_fonts.js",
-                "~/Scripts/jquery.dataTables.odata.js")
+                "~/Content/theme/vendors/scripts/script.js",
+                "~/Content/theme/src/plugins/datatables/media/js/jquery.dataTables.min.js",
+                "~/Content/theme/src/plugins/datatables/media/js/dataTables.bootstrap4.js",
+                "~/Content/theme/src/plugins/datatables/media/js/dataTables.responsive.js",
+                "~/Content/theme/src/plugins/datatables/media/js/responsive.bootstrap4.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/dataTables.buttons.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/buttons.bootstrap4.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/buttons.print.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/buttons.html5.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/buttons.flash.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/pdfmake.min.js",
+                "~/Content/theme/src/plugins/datatables/media/js/button/vfs_fonts.js",
+                "~/Scripts/jquery.dataTables.odata.js",
+                "~/Scripts/waitMe.min.js",
+                "~/Scripts/bootbox.js",
+                "~/Scripts/loaders.css.js")
                 .IncludeDirectory("~/Scripts/AppScripts", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
@@ -52,11 +55,14 @@ namespace InSitu.Web
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/css")
+                .Include(
                 "~/Content/Theme/vendors/styles/style.css",
-                "~/Content/Theme/src/plugins/datatables/media/css/jquery.dataTables.css",
-                "~/Content/Theme/src/plugins/datatables/media/css/dataTables.bootstrap4.css",
-                "~/Content/Theme/src/plugins/datatables/media/css/responsive.dataTables.css",
+                "~/Content/theme/src/plugins/datatables/media/css/jquery.dataTables.css",
+                "~/Content/theme/src/plugins/datatables/media/css/dataTables.bootstrap4.css",
+                "~/Content/theme/src/plugins/datatables/media/css/responsive.dataTables.css",
+                "~/Content/waitMe.min.css",
+                "~/Content/loaders.min.css",
                 "~/Content/site.css"));
         }
     }

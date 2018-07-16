@@ -44,7 +44,7 @@ namespace InSitu.Web
             builder.EntitySet<PaintType>("PaintTypes");
             builder.EntitySet<Size>("Sizes");
             builder.EntitySet<UseType>("UseTypes");
-            builder.EntitySet<Version>("Versions");
+            builder.EntitySet<CarVersion>("Versions");
         }
     }
 }

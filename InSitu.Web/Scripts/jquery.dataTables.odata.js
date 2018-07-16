@@ -38,6 +38,11 @@ function fnServerOData(sUrl, aoData, fnCallback, oSettings) {
 
     $.each(oSettings.aoColumns, function (i, value) {
         var sFieldName = (value.sName !== null && value.sName !== "") ? value.sName : ((typeof value.mData === 'string') ? value.mData : null);
+
+        if (value.mData === "excluded") {
+            return;
+        }
+
         if (sFieldName === null || !isNaN(Number(sFieldName))) {
             sFieldName = value.sTitle;
         }
@@ -77,6 +82,10 @@ function fnServerOData(sUrl, aoData, fnCallback, oSettings) {
                     switch (value.sType) {
                     case 'string':
                     case 'html':
+
+                        if (value.mData === "excluded") {
+                            return;
+                        }
 
                         if (oParams.sSearch !== null && oParams.sSearch !== "")
                         {

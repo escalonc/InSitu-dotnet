@@ -1,20 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace InSitu.Web.Controllers
 {
-    using InSitu.Data.Models.CarInformation;
-    using InSitu.Data.Repositories;
-
+    /// <summary>
+    /// The brands controller.
+    /// </summary>
     public class BrandsController : Controller
     {
-        // GET: Brands
+        /// <summary>
+        /// The index.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="ActionResult"/>.
+        /// </returns>
         public ActionResult Index()
         {
-            return View();
+            return this.View();
+        }
+
+        /// <summary>
+        /// The create.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="ActionResult"/>.
+        /// </returns>
+        public ActionResult Create()
+        {
+            return this.View();
         }
     }
 }

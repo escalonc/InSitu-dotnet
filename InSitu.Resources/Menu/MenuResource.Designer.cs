@@ -79,11 +79,74 @@ namespace InSitu.Resources.Menu {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modelos.
+        /// </summary>
+        public static string CarModels {
+            get {
+                return ResourceManager.GetString("CarModels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tipos.
+        /// </summary>
+        public static string CarTypes {
+            get {
+                return ResourceManager.GetString("CarTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combustible.
+        /// </summary>
+        public static string FuelTypes {
+            get {
+                return ResourceManager.GetString("FuelTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inicio.
         /// </summary>
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pintura.
+        /// </summary>
+        public static string PaintTypes {
+            get {
+                return ResourceManager.GetString("PaintTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamaños.
+        /// </summary>
+        public static string Sizes {
+            get {
+                return ResourceManager.GetString("Sizes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tipos de uso.
+        /// </summary>
+        public static string UseTypes {
+            get {
+                return ResourceManager.GetString("UseTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Versiones.
+        /// </summary>
+        public static string Versions {
+            get {
+                return ResourceManager.GetString("Versions", resourceCulture);
             }
         }
     }

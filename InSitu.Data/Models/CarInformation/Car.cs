@@ -58,7 +58,7 @@ namespace InSitu.Data.Models.CarInformation
         /// <summary>
         /// Gets or sets the version.
         /// </summary>
-        public virtual Version Version { get; set; }
+        public virtual CarVersion Version { get; set; }
 
         /// <summary>
         /// Gets or sets the car type.

@@ -22,6 +22,55 @@
           <Controller>Brands</Controller>
           <Action>Index</Action>
         </Item>
+        <Item>
+          <ResourceKey>CarModels</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>CarModels</Controller>
+          <Action>Index</Action>
+        </Item>
+        <Item>
+          <ResourceKey>CarTypes</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>CarTypes</Controller>
+          <Action>Index</Action>
+        </Item>
+        <Item>
+          <ResourceKey>FuelTypes</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>FuelTypes</Controller>
+          <Action>Index</Action>
+        </Item>
+        <Item>
+          <ResourceKey>PaintTypes</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>PaintTypes</Controller>
+          <Action>Index</Action>
+        </Item>
+        <Item>
+          <ResourceKey>Sizes</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>Sizes</Controller>
+          <Action>Index</Action>
+        </Item>
+        <Item>
+          <ResourceKey>UseTypes</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>UseTypes</Controller>
+          <Action>Index</Action>
+        </Item>
+        <Item>
+          <ResourceKey>Versions</ResourceKey>
+          <Icon>fa fa-car</Icon>
+          <Role>evaluator</Role>
+          <Controller>Versions</Controller>
+          <Action>Index</Action>
+        </Item>
       </Items>
     </Group>
   </Groups>

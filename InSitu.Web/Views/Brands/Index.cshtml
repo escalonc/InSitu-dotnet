@@ -1,7 +1,8 @@
-﻿@using InSitu.Resources.Menu
+﻿@using InSitu.Resources.Brand
+@using InSitu.Resources.Menu
 @using InSitu.Resources.Table
 @using Microsoft.OData.UriParser
-@model InSitu.Web.Models.BrandViewModel
+@model InSitu.Web.Models.CarInformation.BrandViewModel
 
 @{
     ViewBag.Title = MenuResource.Brands;
@@ -14,11 +15,12 @@
         </div>
     </div>
     <div class="row">
-        <table class="data-table stripe hover nowrap" id="brands">
+        <table class="data-table stripe hover nowrap" id="brandsTable">
             <thead>
                 <tr>
-                    <th>Cod</th>
-                    <th>Name</th>
+                    <th class="table-plus">@TableResource.Id</th>
+                    <th>@BrandResource.Name</th>
+                    <th class="datatable-nosort">@TableResource.Actions</th>
                 </tr>
             </thead>
         </table>
@@ -29,24 +31,67 @@
 {
     <script>
         $(function () {
-            $("#brands").DataTable({
+            var table = $("#brandsTable").DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        text: 'Crear',
+                        className: 'btn btn-primary',
+                        action: function () {
+                            bootbox.remote({
+                                title: "Crear una marca",
+                                url: '@Url.Action("Create")'
+                            });
+                        }
+                    }
+                ],
+                scrollCollapse: true,
+                autoWidth: false,
+                responsive: true,
                 "sAjaxSource": "@Url.OdataUrl("ODataRoute", new DynamicPathSegment("Brands"))",
                 "iODataVersion": 4,
                 "aoColumns": [
                     { mData: "Id" },
-                    { mData: "Name" }
+                    { mData: "Name" },
+                    { mData: "excluded" }
                 ],
-                "language": {
-                    "url": "@Url.Content("~/Scripts/translations/spanish.json")"
-                },
-                "processing": true,
                 "columnDefs": [
-                    { "width": "10%", "targets": 0 }
+                    { "width": "10%", "targets": 0 },
+                    { "width": "80%", "targets": 1 },
+                    {
+                        "targets": 2,
+                        orderable: false,
+                        "data": null,
+                        "width": "10%",
+                        "defaultContent": `<div class="dropdown">
+                                               <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                                <i class="fa fa-ellipsis-h"></i>
+                                               </a>
+                                               <div class="dropdown-menu dropdown-menu-right">
+                                                  <a class="dropdown-item insitu-view" href="#"><i class="fa fa-eye"></i> @TableResource.View</a>
+                                                  <a class="dropdown-item insitu-edit" href="#"><i class="fa fa-pencil"></i> @TableResource.Edit</a>
+                                                  <a class="dropdown-item insitu-delete" href="#"><i class="fa fa-trash"></i> @TableResource.Delete</a>
+                                               </div>
+                                            </div>`
+                    }
                 ],
                 "fnServerData": fnServerOData,
                 "bServerSide": true,
                 "bUseODataViaJSONP": false
             });
+
+            $('#brandsTable').on('click', 'tbody .insitu-view', function () {
+                var data = table.row($(this).closest('tr')).data();
+            });
+
+            $('#brandsTable').on('click', 'tbody .insitu-edit', function () {
+                var data = table.row($(this).closest('tr')).data();
+            });
+
+            $('#brandsTable').on('click', 'tbody .insitu-delete', function () {
+                var data = table.row($(this).closest('tr')).data();
+            });
+
         });
     </script>
 }

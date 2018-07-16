@@ -123,4 +123,19 @@
   <data name="TotalEntries" xml:space="preserve">
     <value>_START_-_END_ de _TOTAL_ registros</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
 </root>

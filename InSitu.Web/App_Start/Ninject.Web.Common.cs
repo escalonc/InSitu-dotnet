@@ -70,6 +70,13 @@ namespace InSitu.Web.App_Start
             kernel.Bind<InSituContext>().ToSelf().InRequestScope();
             kernel.Bind<BaseRepository<Brand>>().To<BrandRepository>().InRequestScope();
             kernel.Bind<BaseRepository<CarModel>>().To<CarModelRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<CarType>>().To<CarTypeRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<FuelType>>().To<FuelTypeRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<PaintType>>().To<PaintTypeRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<Size>>().To<SizeRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<UseType>>().To<UseTypeRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<CarVersion>>().To<CarVersionRepository>().InRequestScope();
+
         }        
     }
 }
