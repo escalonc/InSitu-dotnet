@@ -22,7 +22,7 @@
                     $(".modal-content").waitMe("hide");
                 },
                 success: function () {
-                    console.log("Ok");
+                    $("#useTypesTable").DataTable().ajax.reload();
                     $("#useTypeForm").resetForm();
                     $(".insitu-notification").append(
                         `<div class="alert alert-success alert-dismissible fade show" role="alert">

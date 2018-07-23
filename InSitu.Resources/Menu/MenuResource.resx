@@ -127,4 +127,7 @@
   <data name="PaintTypes" xml:space="preserve">
     <value>Pintura</value>
   </data>
+  <data name="Customers" xml:space="preserve">
+    <value></value>
+  </data>
 </root>

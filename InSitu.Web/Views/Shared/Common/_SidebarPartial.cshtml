@@ -11,7 +11,7 @@
                 @foreach (var item in @MenuConfigurationFactory.Create().Items)
                 {
                     <li>
-                        <a href="@Url.Action(item.Action, item.Controller)" class="dropdown-toggle no-arrow">
+                        <a href="@Url.Action(item.Action, item.Controller)" class="dropdown-toggle no-arrow @Html.IsActive(item.Controller, item.Action, "active")">
                             <span class="@item.Icon"></span>
                             <span class="mtext">@item.Text</span>
                         </a>
@@ -20,12 +20,12 @@
 
                 @foreach (var group in @MenuConfigurationFactory.Create().Groups)
                 {
-                    <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                    <li class="dropdown @if(Html.IsGroupActive(group)){ <text>show</text> }">
+                        <a href="javascript:;" class="dropdown-toggle" @if(Html.IsGroupActive(group)){ <text>data-option="on"</text> }>
                             <span class="@group.Icon"></span>
                             <span class="mtext">@group.Text</span>
                         </a>
-                        <ul class="submenu">
+                        <ul class="submenu" @if(Html.IsGroupActive(group)){ <text>style="display: block;"</text> }>
                             @foreach (var item in group.Items)
                             {
                                 <li>

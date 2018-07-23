@@ -164,6 +164,8 @@ namespace InSitu.Data.Contexts
         /// </summary>
         public virtual DbSet<Person> Persons { get; set; }
 
+        public virtual DbSet<Customer> Customers { get; set; }
+
         /// <summary>
         /// The create.
         /// </summary>

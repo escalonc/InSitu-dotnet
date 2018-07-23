@@ -7,17 +7,17 @@ using System.Web.Http;
 
 namespace InSitu.Web.Controllers.Odata
 {
-    using InSitu.Data.Models.CarInformation;
+    using InSitu.Data.Models.Person;
     using InSitu.Data.Repositories;
 
-    public class CarVersionsController : OdataBaseController<CarVersion, int>
+    public class CustomersController : OdataBaseController<Customer, int>
     {
-        public CarVersionsController(BaseRepository<CarVersion> repository)
+        public CustomersController(BaseRepository<Customer> repository)
             : base(repository)
         {
         }
 
-        public override IQueryable<CarVersion> CreateSingle(int key)
+        public override IQueryable<Customer> CreateSingle(int key)
         {
             throw new NotImplementedException();
         }
@@ -27,7 +27,7 @@ namespace InSitu.Web.Controllers.Odata
             throw new NotImplementedException();
         }
 
-        public override bool EntityExists(CarVersion entity)
+        public override bool EntityExists(Customer entity)
         {
             throw new NotImplementedException();
         }

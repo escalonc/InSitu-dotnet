@@ -68,7 +68,7 @@
           <ResourceKey>Versions</ResourceKey>
           <Icon>fa fa-car</Icon>
           <Role>evaluator</Role>
-          <Controller>Versions</Controller>
+          <Controller>CarVersions</Controller>
           <Action>Index</Action>
         </Item>
       </Items>

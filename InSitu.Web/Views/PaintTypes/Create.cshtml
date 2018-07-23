@@ -22,7 +22,7 @@
                     $(".modal-content").waitMe("hide");
                 },
                 success: function () {
-                    console.log("Ok");
+                    $("#paintTypesTable").DataTable().ajax.reload();
                     $("#paintTypesForm").resetForm();
                     $(".insitu-notification").append(
                         `<div class="alert alert-success alert-dismissible fade show" role="alert">

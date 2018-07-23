@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="row">
-        <table class="data-table stripe hover nowrap" id="versionsTable">
+        <table class="data-table stripe hover nowrap" id="sizesTable">
             <thead>
                 <tr>
                     <th class="table-plus">@TableResource.Id</th>
@@ -31,7 +31,7 @@
 {
     <script>
         $(function () {
-            var table = $("#versionsTable").DataTable({
+            var table = $("#sizesTable").DataTable({
                 dom: 'Bfrtip',
                 buttons: [
                     {
@@ -48,7 +48,7 @@
                 scrollCollapse: true,
                 autoWidth: false,
                 responsive: true,
-                "sAjaxSource": "@Url.OdataUrl("ODataRoute", new DynamicPathSegment("Versions"))",
+                "sAjaxSource": "@Url.OdataUrl("ODataRoute", new DynamicPathSegment("Sizes"))",
                 "iODataVersion": 4,
                 "aoColumns": [
                     { mData: "Id" },
@@ -80,15 +80,15 @@
                 "bUseODataViaJSONP": false
             });
 
-            $('#versionsTable').on('click', 'tbody .insitu-view', function () {
+            $('#sizesTable').on('click', 'tbody .insitu-view', function () {
                 var data = table.row($(this).closest('tr')).data();
             });
 
-            $('#versionsTable').on('click', 'tbody .insitu-edit', function () {
+            $('#sizesTable').on('click', 'tbody .insitu-edit', function () {
                 var data = table.row($(this).closest('tr')).data();
             });
 
-            $('#versionsTable').on('click', 'tbody .insitu-delete', function () {
+            $('#sizesTable').on('click', 'tbody .insitu-delete', function () {
                 var data = table.row($(this).closest('tr')).data();
             });
 

@@ -97,6 +97,15 @@ namespace InSitu.Resources.Menu {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string Customers {
+            get {
+                return ResourceManager.GetString("Customers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Combustible.
         /// </summary>
         public static string FuelTypes {

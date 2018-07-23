@@ -2,16 +2,15 @@
 @using InSitu.Resources.Menu
 @using InSitu.Resources.Table
 @using Microsoft.OData.UriParser
-@model InSitu.Web.Models.CarInformation.BrandViewModel
 
 @{
-    ViewBag.Title = MenuResource.Brands;
+    ViewBag.Title = MenuResource.Customers;
 }
 
 <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
     <div class="clearfix mb-20">
         <div class="pull-left">
-            <h5 class="text-blue">@MenuResource.Brands</h5>
+            <h5 class="text-blue">@MenuResource.Customers</h5>
         </div>
     </div>
     <div class="row">
@@ -19,7 +18,9 @@
             <thead>
                 <tr>
                     <th class="table-plus">@TableResource.Id</th>
-                    <th>@BrandResource.Name</th>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
                     <th class="datatable-nosort">@TableResource.Actions</th>
                 </tr>
             </thead>
@@ -39,7 +40,7 @@
                         className: 'btn btn-primary',
                         action: function () {
                             bootbox.remote({
-                                title: "Crear una marca",
+                                title: "Crear un cliente",
                                 url: '@Url.Action("Create")'
                             });
                         }
@@ -48,11 +49,12 @@
                 scrollCollapse: true,
                 autoWidth: false,
                 responsive: true,
-                "sAjaxSource": "@Url.OdataUrl("ODataRoute", new DynamicPathSegment("Brands"))",
+                "sAjaxSource": "@Url.OdataUrl("ODataRoute", new DynamicPathSegment("Customers"))",
                 "iODataVersion": 4,
                 "aoColumns": [
                     { mData: "Id" },
-                    { mData: "Name" },
+                    { mData: "FirstName" },
+                    { mData: "Surnames" },
                     { mData: "excluded" }
                 ],
                 "columnDefs": [

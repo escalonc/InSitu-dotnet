@@ -8,6 +8,7 @@ namespace InSitu.Web.App_Start
     using System.Web.Http;
     using InSitu.Data.Contexts;
     using InSitu.Data.Models.CarInformation;
+    using InSitu.Data.Models.Person;
     using InSitu.Data.Repositories;
 
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
@@ -76,6 +77,7 @@ namespace InSitu.Web.App_Start
             kernel.Bind<BaseRepository<Size>>().To<SizeRepository>().InRequestScope();
             kernel.Bind<BaseRepository<UseType>>().To<UseTypeRepository>().InRequestScope();
             kernel.Bind<BaseRepository<CarVersion>>().To<CarVersionRepository>().InRequestScope();
+            kernel.Bind<BaseRepository<Customer>>().To<CustomerRepository>().InRequestScope();
 
         }        
     }

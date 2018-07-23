@@ -90,6 +90,7 @@
     <Compile Include="Repositories\BrandRepository.cs" />
     <Compile Include="Repositories\CarModelRepository.cs" />
     <Compile Include="Repositories\CarTypeRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\FuelTypeRepository.cs" />
     <Compile Include="Repositories\PaintTypeRepository.cs" />
     <Compile Include="Repositories\SizeRepository.cs" />

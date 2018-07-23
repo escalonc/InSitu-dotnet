@@ -22,8 +22,8 @@
                     $(".modal-content").waitMe("hide");
                 },
                 success: function () {
-                    console.log("Ok");
                     $("#carModelForm").resetForm();
+                    $("#carModelsTable").DataTable().ajax.reload();
                     $(".insitu-notification").append(
                         `<div class="alert alert-success alert-dismissible fade show" role="alert">
 								Operación finalizada exitosamente.

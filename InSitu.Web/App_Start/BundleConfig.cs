@@ -45,6 +45,7 @@ namespace InSitu.Web
                 "~/Content/theme/src/plugins/datatables/media/js/button/pdfmake.min.js",
                 "~/Content/theme/src/plugins/datatables/media/js/button/vfs_fonts.js",
                 "~/Scripts/jquery.dataTables.odata.js",
+                "~/Scripts/jquery.form.min.js",
                 "~/Scripts/waitMe.min.js",
                 "~/Scripts/bootbox.js",
                 "~/Scripts/loaders.css.js")
